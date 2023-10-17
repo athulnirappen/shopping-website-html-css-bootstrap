@@ -1,0 +1,110 @@
+
+
+/* navbar */
+
+header{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    background-color:rgb(215, 212, 235);
+}
+
+.nav-item a{
+    padding: 5px 20px;
+   
+
+}
+
+.nav-item a:hover{
+    
+    color:blue;
+   
+   
+}
+
+.container input{
+    width: 350px;
+}
+.icons{
+    cursor: pointer;
+}
+
+
+@media (max-width:400px){
+    .container input{
+    width: 200px;
+}
+
+}
+
+@media (max-width:600px){
+    .carousel-inner .carousel-item img{
+        max-height: 300px;
+        
+    }
+}
+
+
+
+.offer-section{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(91, 31, 31);
+}
+
+.offer-section h1{
+    color: rgb(193, 169, 33);
+}
+.offer-section p{
+    color: white;
+}
+
+.offer-content{
+   position: absolute;
+   bottom: 0;
+    background-color:white;
+    width: 150px;
+    height: 70px;
+   
+}
+
+/* shop */
+
+#shop{
+    margin-top: 5%;
+    padding: 4.5rem;
+    margin-bottom: 5%;
+}
+
+#shop .card{
+    box-shadow: darkkhaki;
+}
+
+@media (max-width:700px){
+    #shop{
+        padding: 2rem;
+    }
+}
+
+
+
+/* arrival */
+
+#newarrivals{
+    margin-top: 5%;
+    padding: 4.5rem;
+    margin-bottom: 5%;
+
+}
+
+@media (max-width:700px){
+    #newarrivals{
+        padding: 2rem;
+    }
+}
+.badge-section img{
+    width: 100%;
+    height: 300px;
+}

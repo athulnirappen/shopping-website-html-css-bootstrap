@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online shopping cart</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-white">
+        <div class="container">
+          <a class="navbar-brand fs-3 fw-bold" href="#">Shopify</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <form class="d-flex mx-5" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-danger" type="submit">
+                  Search
+                </button>
+              </form>
+              <li class="nav-item">
+                <a
+                  class="nav-link fs-5 fw-bold"
+                  aria-current="page"
+                  href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 fw-bold" href="#shop">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 fw-bold" href="#newarrivals">New arrivals</a>
+              </li>
+
+              <div
+                class="mx-3 d-flex align-items-center justify-content-center icons"
+              >
+                <i class="fa-solid fa-user fs-5 mx-2"></i>
+                <i class="fa-solid fa-heart fs-5 mx-2"></i>
+                <i class="fa-solid fa-cart-shopping fs-5 mx-2"></i>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- carousal -->
+    <div id="home">
+      <div class="mt-5 p-4">
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+              <img
+                src="https://media.istockphoto.com/id/1414489347/photo/happy-little-girl-pointing-at-backpack-while-buying-school-supplies-with-her-parents-in.jpg?s=612x612&w=0&k=20&c=ccyEcquLeM7Vt-37qOH1Q-vPps8V_HygXEkYpO6hjhQ="
+                class="d-block w-100"
+                alt="no image"
+                height="500px"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img
+                src="https://media.istockphoto.com/id/627585972/photo/young-family-shopping-for-christmas.jpg?s=612x612&w=0&k=20&c=bPT5vEoQPoX1EDL6BOPXgkKbuAn7Cf4zIeOJ_X3Tpxo="
+                class="d-block w-100"
+                alt="no image"
+                height="500px"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img
+                src="https://media.istockphoto.com/id/916567394/photo/girls-having-fun-in-the-shopping-center.jpg?s=612x612&w=0&k=20&c=4Dvs1WUC4mLrm7FFpLrlyMoyW2LXXzDHDMQCBmGNS7U="
+                class="d-block w-100"
+                alt="no image"
+                height="500px"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- offer section -->
+
+    <div
+      class="container-fluid mt-5 offer-section d-flex align-items-center justify-content-center flex-column"
+    >
+      <h1 class="">FESTIVE CRAZY OFFERS</h1>
+      <p class="fs-3">Irresistable Discounts To Bag</p>
+    </div>
+    <div class="container-fluid pb-5">
+      <div class="row">
+        <div
+          class="col border border-2 d-flex align-items-center justify-content-center p-3 position-relative"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17HF1PcIenHyCDUgeudwhKWH6k_voz3Ww4g&usqp=CAU"
+            alt="no image"
+            width="150px"
+            height="200px"
+          />
+          <div
+            class="offer-content d-flex align-items-center justify-content-center flex-column"
+          >
+            <p class="mt-2">Shirts</p>
+            <h5 class="fs-6 mb-3">MIN.50% OFF</h5>
+          </div>
+        </div>
+        <div
+          class="col border border-2 d-flex align-items-center justify-content-center p-3 position-relative"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSEluQgJ5XWyA-IHlwn0fymwHyLlrJiNrzYA&usqp=CAU"
+            alt="no image"
+            width="150px"
+            height="200px"
+          />
+          <div
+            class="offer-content d-flex align-items-center justify-content-center flex-column"
+          >
+            <p class="mt-2">Casuals</p>
+            <h5 class="fs-6 mb-3">MIN.50% OFF</h5>
+          </div>
+        </div>
+        <div
+          class="col border border-2 d-flex align-items-center justify-content-center p-3 position-relative"
+        >
+          <img
+            src="https://media.istockphoto.com/id/1206211067/photo/plain-black-t-shirt-hanging-on-wall.jpg?s=612x612&w=0&k=20&c=hB4lbXTTqK7lryLlrYTyIyDT753aPCrKqPe1TC1pRTM="
+            alt=""
+            width="150px"
+            height="200px"
+          />
+          <div
+            class="offer-content d-flex align-items-center justify-content-center flex-column"
+          >
+            <p class="mt-2">Tshirt</p>
+            <h5 class="fs-6 mb-3">MIN.50% OFF</h5>
+          </div>
+        </div>
+        <div
+          class="col border border-2 d-flex align-items-center justify-content-center p-3 position-relative"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGmB3u9xS_6tREIPjJwNRSk6wuZdKgiH_4EA&usqp=CAU"
+            alt=""
+            width="150px"
+            height="200px"
+          />
+          <div
+            class="offer-content d-flex align-items-center justify-content-center flex-column"
+          >
+            <p class="mt-2">Pants</p>
+            <h5 class="fs-6 mb-3">MIN.50% OFF</h5>
+          </div>
+        </div>
+        <div
+          class="col border border-2 d-flex align-items-center justify-content-center p-3 position-relative"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvnppj-ET8MIBye5P7hPExQLWRG0L-fLnLaA&usqp=CAU"
+            alt=""
+            width="150px"
+            height="200px"
+          />
+          <div
+            class="offer-content d-flex align-items-center justify-content-center flex-column"
+          >
+            <p class="mt-2">Jeans</p>
+            <h5 class="fs-6 mb-3">MIN.50% OFF</h5>
+          </div>
+        </div>
+        <div
+          class="col border border-2 d-flex align-items-center justify-content-center p-3 position-relative"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBRciMQb07u-rCkgKsHu3RdIK5Y3bZgh62dg&usqp=CAU"
+            alt=""
+            width="150px"
+            height="200px"
+          />
+          <div
+            class="offer-content d-flex align-items-center justify-content-center flex-column"
+          >
+            <p class="mt-2">Rippedjeans</p>
+            <h5 class="fs-6 mb-3">MIN.50% OFF</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- shop section -->
+    <section id="shop">
+      <div class="container">
+        <h1 class="text-center text-success">Featured Products</h1>
+
+        <div class="row mt-5">
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card bg-body-tertiary" style="width: 18rem;">
+              <img src="https://images.unsplash.com/photo-1618354691321-e851c56960d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fHRzaGlydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60" class="card-img-top p-3 " alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5 class="text-dark">T-Shirt</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$80</p>
+              </div>
+            </div>
+          </div>
+          <div class="ccol-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card  bg-body-tertiary" style="width: 18rem ;">
+              <img src="https://images.unsplash.com/photo-1582552938357-32b906df40cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGplYW5zfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" class="card-img-top p-3" alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5>Jeans</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$85</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card  bg-body-tertiary" style="width: 18rem;">
+              <img src="https://images.unsplash.com/photo-1602573991155-21f0143bb45c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHBhbnRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" class="card-img-top p-3" alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5>Pants</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$90</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card bg-body-tertiary " style="width: 18rem;">
+              <img src="https://images.unsplash.com/photo-1598032895455-526c9e347a87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fHNoaXJ0fGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" class="card-img-top p-3" alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5>Shirt</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$70</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card bg-body-tertiary" style="width: 18rem;">
+              <img src="https://media.istockphoto.com/id/1287111187/photo/old-blue-jeans.webp?b=1&s=170667a&w=0&k=20&c=VU9IaKeRNkbpmY4u4gZIlyiHKZYh_vYwqVVrnSvGxl8=" class="card-img-top p-3 " alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5>Ripped-Jeans</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$90</p>
+              </div>
+            </div>
+          </div>
+          <div class="ccol-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card bg-body-tertiary" style="width: 18rem;">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjTNfRYAn_OQ0Yf8h42IjyhJAOctZkRSEPmQ&usqp=CAU" class="card-img-top p-3" alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5>Casual Shirt</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$85</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card bg-body-tertiary" style="width: 18rem;">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0rs2nrrMRplp6KtcoT3HXa1uD1bA9rkZ9RA&usqp=CAU" class="card-img-top p-3" alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5>Half-sleev shirt</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$90</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card bg-body-tertiary" style="width: 18rem;">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMa4l0sjg9KoflPe0rwoDRI1v-h9q3OOVW4g&usqp=CAU" class="card-img-top p-3" alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5>Slimfit-Shirt</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$70</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- new arrivals -->
+
+
+    <section id="newarrivals">
+
+      <div class="container">
+        <h1 class="text-center text-primary">New Arrivals</h1>
+
+        <div class="row mt-5">
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card " style="width: 18rem ;background-color: black;">
+              <img src="https://media.istockphoto.com/id/465485445/photo/red-t-shirt-clipping-path.jpg?s=612x612&w=0&k=20&c=SfSPtHeslymJs8KbopzzDWHZzYIAdMMnfon0JRkwfVw=" class="card-img-top p-3 " alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5 class="text-white">T-Shirt</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$80</p>
+              </div>
+            </div>
+          </div>
+          <div class="ccol-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card " style="width: 18rem ; background-color:black;">
+              <img src="https://media.istockphoto.com/id/488499261/photo/jeans-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=k6kHOkSqYgGzbD8NihOl8gCiXyN4GzJuWfG3960s8A4=" class="card-img-top p-3" alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5 class="text-white">Jeans</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$85</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card " style="width: 18rem;background-color: black;">
+              <img src="https://media.istockphoto.com/id/515139983/photo/black-leather-pants.jpg?s=612x612&w=0&k=20&c=A5uZil3n-sh2E5U8d4KA-SaRAXbvHekNgZl6OID-fb4=" class="card-img-top p-3" alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5 class="text-white">Pants</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$90</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 g-4">
+            <div class="card " style="width: 18rem;background-color: black;">
+              <img src="https://media.istockphoto.com/id/1270438087/photo/looks-from-the-80s-are-making-a-comeback-in-fashion.jpg?s=612x612&w=0&k=20&c=gp5oXBzdZcMmoFbN31WIQEuVF_Dc88QRUqGommHbwYQ=" class="card-img-top p-3" alt="no image"  height="300px" />
+              <div class="card-body">
+                <h5 class="text-white">Shirt</h5>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+
+                <p class="text-success fw-bold">$70</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- badge section -->
+    <div class="container-fluid badge-section mb-5">
+      <div class="row mb-5">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative g-4">
+          <img src="https://media.istockphoto.com/id/836798122/photo/online-shopping-young-adult-businessman-thumbs-up-and-looking-at-camera-with-surprised-face.jpg?s=612x612&w=0&k=20&c=CdGvyu8cQAJH7XHA-7aPev76tv5NjWIzaS-0HfeeHuc=" alt="no image">
+          <div class="position-absolute top-50 mx-5">
+            <h3 class="text-white fw-bold  ">Buy 1 get 1 free</h3>
+            <button class="btn btn-success mt-2">Shop now</button>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative g-4">
+          <img src="https://media.istockphoto.com/id/926243716/photo/portrait-of-cool-elegant-boss-in-shirt-pants-holding-one-hand-in-pocket-and-in-another-one.jpg?s=612x612&w=0&k=20&c=jVpl_ovF3bpyicq6ZmQPF0qotHGUoG1b5iGUmyYlpHw=" alt="no image">
+          <div class="position-absolute top-50 mx-5">
+            <h3 class="text-dark fw-bold  ">Upcomming season</h3>
+            <button class="btn btn-outline-primary mt-2">Shop now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 position-relative g-4">
+          <img src="https://media.istockphoto.com/id/1371824069/photo/keep-calm-and-go-shopping.jpg?s=612x612&w=0&k=20&c=225GFa08e6FlarjRm7ZApBm6JIGwGa-Bm54OxRHsDZU=" alt="no image">
+          <div class="position-absolute top-50 mx-5">
+            <h3 class="text-white fw-bold  ">SEASONAL SALE</h3>
+            <button class="btn btn-danger mt-2">Shop now</button>
+          </div>
+        </div>
+        
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 position-relative g-4">
+          <img src="https://media.istockphoto.com/id/1137495242/photo/handsome-man-in-suit-with-shopping-bag.jpg?s=612x612&w=0&k=20&c=0D4HftzfrOj057aWshBYqnG5_piBSyMwB2f7x-CDygY=" alt="no image">
+          <div class="position-absolute top-50 mx-5">
+            <h3 class="text-white fw-bold  ">New Colletions</h3>
+            <button class="btn btn-outline-warning mt-2">Shop now</button>
+          </div>
+
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 position-relative g-4">
+          <img src="https://media.istockphoto.com/id/1309258672/photo/african-american-cheerful-people-holding-shopping-bags-with-new-clothes.jpg?s=612x612&w=0&k=20&c=ua1CxsLE9IUtZ76W9ePNc6EOZmGmRuhgWZeuzkXTsLg=" alt="no image">
+          <div class="position-absolute top-50 mx-5">
+            <h3 class="text-white fw-bold  ">Family Colletions</h3>
+            <button class="btn btn-outline-success mt-2">Shop now</button>
+          </div>
+        </div>
+
+
+      </div>
+      
+    </div>
+
+    <!-- footer -->
+    <footer class="mt-5 bg-body-secondary pt-3">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 g-2">
+            <h2 class="fs-3">Shopify</h2>
+            <p class="fs-6">
+              we offer you the best products
+            </p>
+            <div class="icons">
+              <i class="fa-brands fa-facebook m-1"></i>
+              <i class="fa-brands fa-twitter m-1"></i>
+              <i class="fa-brands fa-instagram m-1"></i>
+              <i class="fa-brands fa-youtube m-1"></i>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 g-2">
+            <h2 class="fs-3">About</h2>
+            <p>About Us</p>
+            <p>Features</p>
+            <p>New & Blog</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 g-2">
+            <h2 class="fs-3">Company</h2>
+            <p>Team</p>
+            <p>Pricing</p>
+            <p>Become a member</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 g-2">
+            <h2 class="fs-3">Support</h2>
+            <p>FAQS</p>
+            <p>Support Center</p>
+            <p>Contact Us</p>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <div class="">
+            <p>&copy;2023 All rights reserved</p>
+          </div>
+          <div class="">
+            <span>Terms & Agreements</span>
+            <span>Privacy Policy</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>
